@@ -1,36 +1,32 @@
-# Write-up — <Nom de la machine/room>
-**Date :** YYYY-MM-DD  
-**Source :** TryHackMe / HackTheBox — <lien si public>  
-**Difficulté :** easy / medium / hard
+# Write-up — <fakebank/OffensivesecurityIntro>
+**Date :** 2025-09-24 
+**Source :** TryHackMe  
+**Difficulté :** easy 
 
 ---
 
 ## Contexte
-Brève phrase sur la cible / objectif.
+Une page web d'une banque fake vaec un compte debiteur
 
 ## Notes à chaud (commandes & outputs)
-- `nmap -sC -sV -oN nmap.txt 10.10.10.5` → ports 22,80,139
-- `gobuster dir -u http://10.10.10.5 -w common.txt` → /uploads
+- dirb http://fakebank.thm 
+    > .../images
+    > .../bank-accounting
 
 ## Accès initial (PoC)
-Étapes précises pour obtenir l’accès initial (commande + output).  
-Ex : `curl -F "file=@shell.php" http://10.10.10.5/uploads` → upload succeeded → hit reverse-shell.
+Ouverture du lien http://fakebank.thm/bank-accounting
+> Accès a une page permettant de faire des virements vers le compte selectionné
 
-**Preuve** : ![screenshot1](./screenshots/xxx.png)
+**Preuve** : flag : BANK-HACKED
 
 ## Post-exploitation / Escalade
-- Actions faites après le shell : `whoami`, `id`, etc.  
-- Méthode d’escalade : expliquer la logique et commandes.  
-- Preuve montée en privilèges (ex : contenu /root/root.txt)
+> Ajout de $1M sur le compte 8881 
 
 ## Impact
-Courte description business : quelles données exposées, conséquences.
+>Compte en banque a fond illimité
 
 ## Recommandations / Remédiations
-1. Action prioritaire (ex: désactiver upload anonymes).  
-2. Patch/version/update.  
-3. Hardening (ex: disable SUID, config change).
+1. Bloquer la page .../bank_accounting
 
 ## Annexes
-- Commandes complètes (copier la session bash).  
-- Liens utiles / références (CVE, docs).
+
