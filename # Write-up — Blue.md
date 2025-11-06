@@ -24,7 +24,7 @@ Mise en context de la machine cible avec la DB MSF
 -> Lancement de Metasploit
 >msfconsole
 -> Création du workspace dédié nommé Blue
->worspace -a Blue
+>workspace -a Blue
 
 #### SCAN ####
 
