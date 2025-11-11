@@ -79,7 +79,7 @@ cmd:id
 
 [...]
 
-cmd: cat /home/ubuntu/falg.txt
+cmd: cat /home/ubuntu/flag.txt
 
 [...]
 </div>THM{ACKME_BLOG_HACKED}
